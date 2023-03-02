@@ -1,16 +1,98 @@
 
 <template>
-    <main class="back-main">
-          <h1 class="content-main">
-          --Content Goes Go--
-          </h1>
-    </main>
+  <main>
+    <div class="content_image">
+    </div>
+    <div>      
+        <AppMovieCard v-for="(movie,i) in movies" :key="i" :series="movie.series" :thumb="movie.thumb"  />         
+     </div>
+   
+  </main>
 </template>
 
 
 <script>
-   export default{
-
+import AppMovieCard from './AppMovieCard.vue';
+export default{
+  components: { 
+    AppMovieCard,
+ },
+    data(){
+        return {
+            movies: [
+  {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$19.99",
+                    "series": "Action Comics",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$3.99",
+                    "series": "American Vampire 1976",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "series": "Aquaman",
+                    "type": "graphic novel"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$2.99",
+                    "series": "Batgirl",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$3.99",
+                    "series": "Batman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$2.99",
+                    "series": "Batman Beyond",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$3.99",
+                    "series": "Batman/Superman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$4.99",
+                    "series": "Batman/Superman Annual",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$5.99",
+                    "series": "Batman: The Joker War Zone",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "series": "Batman: Three Jokers",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$4.99",
+                    "series": "Batman: White Knight Presents: Harley Quinn",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "https://www.cinejosh.com/reviewsimg/big/atm-web-series-review_b_2001231222.jpg",
+                    "price": "$16.99",
+                    "series": "Catwoman",
+                    "type": "graphic novel"
+                }
+            ]
+        }
+    }
 
    }
 </script>
@@ -21,17 +103,11 @@
 
 
 <style lang="scss" scoped>
-
-.back-main{
-    width: 100%;
-    background-color: black;
-    min-height: 200px;
-
-    .content-main{
-        color: white;
-        line-height: 200px;
-        padding-left: 150px;
-    }
-}
-
+     
+     .content_image{
+        background-image: url('/public/jumbotron.jpg');
+        padding: 200px 0;
+     }
+  
 </style>
+
