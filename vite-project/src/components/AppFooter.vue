@@ -200,10 +200,10 @@ li{
 
   }       
   .back_tumb_foot{ 
-         width: 40%;
+         width: 30%;
          position: absolute;
-         right:50px;
-         top: 145%;
+         right:30px;
+         top: 185%;
          
         }
 </style>

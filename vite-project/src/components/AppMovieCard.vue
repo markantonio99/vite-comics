@@ -3,12 +3,12 @@
        
 
 
-     <div class="flex-card">
-        <div v-for="(movie,i) in movies" :key="i" class="movie_items_card">
-            <img class="img_card" :src="movie.thumb" alt="">
-             <h1 class="movie_card_title" >{{ movie.series }}</h1>             
-        </div>
-     </div>
+     
+         <div class="items-card">
+            <img class="img_card" :src="thumb" alt="">
+            <h1 class="movie_card_title" >{{ series }}</h1> 
+         </div>
+         <div></div>
            
 
    
@@ -26,9 +26,13 @@
          series: {
             type: String,
             required: true
-         },       
+         },    
+         thumb: {
+            type: Array ,
+            required: true
+         }
 
-  },
+  }
 
    }
 </script>
@@ -42,17 +46,18 @@
 
 
  
-.flex-card{
-    background-color:#1C1C1C ;
-    display: flex;
-    font-size: 5px;
-    flex-wrap: wrap;
-    padding: 50px 50px;
-    .movie_items_card{
-         flex-basis: calc(100% / 6);
+ 
+.back-main{
+   flex-basis: calc(100% / 6);
 
-         } 
-
+     .items-card{
+      padding: 40px 0;;
+     }
+}
+ 
+ 
+       
+         
          .img_card{
             margin: 0 auto;
             max-width: 150px;
@@ -64,10 +69,6 @@
             font-size: 15px;
             font-weight: 500;
          }
-
-         
-
-}
 
 
 </style>

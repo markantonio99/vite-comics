@@ -3,9 +3,12 @@
   <main>
     <div class="content_image">
     </div>
-    <div>      
-        <AppMovieCard v-for="(movie,i) in movies" :key="i" :series="movie.series" :thumb="movie.thumb"  />         
+    <div class="content_main">
+        <div class="main-movie">      
+        <AppMovieCard v-for="(element,vie,i) in movies" :key="i" :series="element.series" :thumb="element.thumb"  />         
      </div>
+    </div>
+   
    
   </main>
 </template>
@@ -16,7 +19,7 @@ import AppMovieCard from './AppMovieCard.vue';
 export default{
   components: { 
     AppMovieCard,
- },
+},
     data(){
         return {
             movies: [
@@ -104,9 +107,24 @@ export default{
 
 <style lang="scss" scoped>
      
+      
+
+     
      .content_image{
         background-image: url('/public/jumbotron.jpg');
         padding: 200px 0;
+     }
+
+     .content_main{
+        background-color: black;
+      
+     }
+
+     .main-movie{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
      }
   
 </style>
